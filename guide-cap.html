@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>메이플 판타지 - 상한 시스템</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <span class="logo">🍁 메이플 판타지</span>
+  <a href="index.html">홈</a>
+</nav>
+
+<div class="wrap">
+  <div class="hero">
+    <h1>🧱 상한 시스템</h1>
+    <p>올려도 안 먹힌다? 먼저 천장(상한)을 뚫으세요</p>
+  </div>
+
+  <!-- 목차 -->
+  <div class="toc">
+    <b>바로가기</b>
+    <a href="#what">상한이란?</a>
+    <a href="#table">상한 걸린 스탯</a>
+    <a href="#stone">상한석</a>
+    <a href="#capstat">상한 증가 능력치</a>
+    <a href="#tips">올리는 전략</a>
+  </div>
+
+  <div class="callout"><b>📋 어떤 능력치는 아무리 올려도 일정 수치 이상은 적용되지 않습니다.</b> 그 한계를 <b>상한(上限)</b>이라고 합니다. 상한을 모르면 "장비를 맞췄는데 왜 안 세지?" 하게 되니, 이 글을 꼭 읽어두세요.</div>
+
+  <!-- 상한이란 -->
+  <div class="card" id="what">
+    <h2>🔍 상한이란?</h2>
+    <p>일부 능력치에는 <b>적용되는 최대치(상한)</b>가 정해져 있습니다. 상한을 넘는 수치는 <b>그냥 버려집니다.</b></p>
+    <div class="callout warn"><b>⚠️ 예시 — 크리티컬 확률</b><br>
+      크리율 상한이 <b>70%</b>인데 장비로 크리율을 <b>90%</b>까지 맞췄다면 →
+      실제로는 <b>70%만 적용</b>되고, 나머지 <b>20%는 효과가 없습니다.</b></div>
+    <p>즉, <b>상한에 막힌 스탯은 더 올려도 낭비</b>입니다. 그 위로 효과를 보려면 <b>상한 자체를 올려야</b> 합니다.</p>
+    <div class="callout tip"><b>💡</b> 상한은 "이 수치까지만 먹힌다"는 <b>천장</b>이라고 생각하세요. 천장을 올려야 그 위에 쌓은 수치가 비로소 의미를 가집니다.</div>
+  </div>
+
+  <!-- 상한 걸린 스탯 -->
+  <div class="card" id="table">
+    <h2>📊 상한이 걸린 스탯</h2>
+    <p>주요 능력치의 <b>기본 상한</b>(시작값)과 <b>절대 상한</b>(아무리 올려도 못 넘는 한계)입니다.</p>
+    <table class="gtable">
+      <tr><th>능력치</th><th>기본 상한</th><th>절대 상한</th></tr>
+      <tr><td>데미지</td><td>200%</td><td>400%</td></tr>
+      <tr><td>보스 데미지</td><td>200%</td><td>350%</td></tr>
+      <tr><td>일반 데미지</td><td>200%</td><td>350%</td></tr>
+      <tr><td><b>최종 데미지</b></td><td><b>150%</b></td><td><b>200%</b></td></tr>
+      <tr><td>크리티컬 확률</td><td>70%</td><td>100%</td></tr>
+      <tr><td>크리티컬 데미지</td><td>250%</td><td>400%</td></tr>
+      <tr><td>방어 무시</td><td>50%</td><td>90%</td></tr>
+      <tr><td>데미지 감소</td><td>30%</td><td>70%</td></tr>
+      <tr><td>쿨타임 감소</td><td>30%</td><td>50%</td></tr>
+      <tr><td>상태이상 저항</td><td>50%</td><td>90%</td></tr>
+      <tr><td>버프 지속시간</td><td>150%</td><td>200%</td></tr>
+      <tr><td>공격 속도</td><td>8</td><td>8 (고정)</td></tr>
+    </table>
+    <div class="callout warn"><b>⚠️ 「최종 데미지」 상한이 가장 빡빡합니다.</b> 기본 150% / 최대 200%로 한계가 낮으니, 최종 데미지를 노린다면 상한을 꼭 챙기세요.</div>
+    <p class="muted">※ 이동 속도·점프력에는 기본 상한만 있고, 경험치는 상한이 없습니다. 공격 속도는 8에서 고정(더 못 올림)입니다.</p>
+  </div>
+
+  <!-- 상한석 -->
+  <div class="card" id="stone">
+    <h2>💎 상한석 — 상한을 올리는 핵심 장비</h2>
+    <div class="callout warn"><b>⚠️ 상한석은 130레벨 이상 엔드게임 콘텐츠입니다.</b> 상한 자체는 처음부터 적용되지만, 상한석으로 상한을 올리는 것은 고레벨 단계의 일이니 저레벨 때는 신경 쓰지 않아도 됩니다.</div>
+    <p>상한을 올리는 가장 기본적인 방법은 <b>상한석</b>을 장착하는 것입니다.</p>
+    <ul class="steps">
+      <li>상한석은 <b>전용 슬롯 1칸</b>에 장착합니다. (한 번에 1개만)</li>
+      <li>상한석에는 <b>랜덤 옵션</b>이 붙어 있고, 그 <b>옵션 수치만큼 해당 상한이 올라갑니다.</b></li>
+      <li>예: 상한석에 <code>데미지 +8</code> 옵션이 있으면 → <b>데미지 상한이 +8</b> 올라갑니다.</li>
+    </ul>
+
+    <h3>상한석 등급</h3>
+    <table class="gtable">
+      <tr><th>등급</th><th>옵션 개수</th><th>옵션 수치</th></tr>
+      <tr><td>노멀</td><td>1줄</td><td>기본</td></tr>
+      <tr><td>레어</td><td>2줄</td><td>기본</td></tr>
+      <tr><td>에픽</td><td>3줄</td><td>기본</td></tr>
+      <tr><td>유니크</td><td>4줄</td><td>기본</td></tr>
+      <tr><td><b style="color:#8cdf6f">레전더리</b></td><td>4줄</td><td><b>×1.4 (최대치 상승)</b></td></tr>
+    </table>
+    <div class="callout tip"><b>💡</b> 등급이 높을수록 <b>옵션 줄 수가 많고(최대 4줄)</b>, 레전더리는 옵션 수치 폭까지 <b>1.4배</b>로 커집니다. 좋은 상한석 하나가 여러 상한을 한꺼번에 뚫어줍니다.</div>
+  </div>
+
+  <!-- 상한 증가 능력치 -->
+  <div class="card" id="capstat">
+    <h2>🔼 상한 증가 능력치</h2>
+    <p>상한석 말고도, <b>상한 자체를 올려주는 능력치</b>가 있습니다. 보통 능력치는 수치를 <b>더해주지만</b>, 「상한 증가」 능력치는 <b>천장(상한)을 직접 올려줍니다.</b></p>
+    <table class="gtable">
+      <tr><th>일반 능력치</th><td><code>데미지 +10%</code> → 데미지를 10% 더함 <span class="muted">(단, 상한까지만 적용)</span></td></tr>
+      <tr><th>상한 증가 능력치</th><td><code>데미지 상한 +20%</code> → 데미지 <b>상한이 20% 올라감</b> <span class="muted">(그만큼 더 쌓을 수 있게 됨)</span></td></tr>
+    </table>
+    <p><b>상한 증가 능력치는 모든 스탯에 있는 게 아닙니다.</b> <b>데미지 · 크리티컬 데미지 · 일반 몬스터 데미지 · 보스 데미지</b> 같은 <b>일부 공격 스탯의 상한만</b> 올려주며, 주로 <b>도감</b>에서 얻습니다.</p>
+    <div class="callout warn"><b>⚠️ 헷갈리지 마세요!</b> <b>「데미지 +20%」</b>(능력치 자체)와 <b>「데미지 <u>상한</u> +20%」</b>(천장을 올림)는 <b>완전히 다른 옵션</b>입니다. 상한에 막혀 있다면 앞의 것은 낭비, 뒤의 것이 필요합니다.</div>
+    <div class="callout tip"><b>💡</b> 상한석과 상한 증가 능력치를 <b>함께</b> 챙기면, 막혀 있던 스탯의 천장을 <b>절대 상한</b>까지 끌어올릴 수 있습니다.</div>
+  </div>
+
+  <!-- 전략 -->
+  <div class="card" id="tips">
+    <h2>🎯 상한 올리는 전략</h2>
+    <p>상한을 올리는 방법은 두 가지입니다.</p>
+    <table class="gtable">
+      <tr><th>① 상한석</th><td>전용 슬롯에 장착 (메인 수단)</td></tr>
+      <tr><th>② 상한 증가 옵션</th><td>일부 장비·스킬에 붙는 <b>「○○ 상한 +N」</b> 옵션 (상한석만큼 흔하진 않음)</td></tr>
+    </table>
+    <p>이 둘을 합쳐서 <b>절대 상한까지</b> 끌어올리는 것이 최종 목표입니다.</p>
+
+    <div class="callout warn"><b>⚠️ 스탯을 무작정 올리기 전에 상한을 확인하세요.</b> 이미 상한에 닿은 스탯은 더 올려도 <b>전부 낭비</b>입니다. 그 경우엔 능력치 대신 <b>상한석·상한 옵션</b>으로 천장부터 올리는 게 이득입니다.</div>
+    <div class="callout tip"><b>💡 우선순위</b> — 상한이 낮아 금방 막히는 <b>최종 데미지(150)·크리티컬 확률(70)</b> 같은 스탯부터 상한을 뚫어주면 효율이 좋습니다.</div>
+
+    <div class="btnrow">
+      <a class="btn ghost" href="index.html">← 가이드 메뉴로 돌아가기</a>
+    </div>
+  </div>
+
+  <footer>© 2026 메이플 판타지 · 상한 시스템<br><span class="ai-credit">🤖 이 사이트는 <b>Claude AI</b>의 도움으로 만들었습니다</span></footer>
+</div>
+
+</body>
+</html>
