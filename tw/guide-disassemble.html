@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>楓之幻想 - 裝備分解</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <span class="logo">🍁 楓之幻想</span>
+  <a href="index.html">首頁</a>
+  <a href="../guide-disassemble.html" class="lang">🇰🇷 한국어</a>
+</nav>
+
+<div class="wrap">
+  <div class="hero">
+    <h1>🔨 裝備分解</h1>
+    <p>把不用的裝備變成材料 — 但好裝備一定要用「星星勾選」保護</p>
+  </div>
+
+  <!-- 목차 -->
+  <div class="toc">
+    <b>快速跳轉</b>
+    <a href="#what">什麼是分解？</a>
+    <a href="#filter">分解篩選 (重要)</a>
+    <a href="#level">分解等級</a>
+    <a href="#bonus">材料雙倍獎勵</a>
+    <a href="#auto">自動分解按鈕</a>
+  </div>
+
+  <div class="callout warn"><b>⚠️ 最容易搞混的地方！</b> 在篩選中<b>「勾選」黃星·綠星後，該裝備會被排除在分解之外(保護)</b>。<br>
+    「勾選 = 分解」是<b>錯的</b>，<b>「勾選 = 安全(不分解)」</b>才對。想保護好裝備就勾選它！</div>
+
+  <!-- 분해란 -->
+  <div class="card" id="what">
+    <h2>🔍 什麼是分解？</h2>
+    <p>將不需要的裝備<b>分解</b>後可獲得用於強化·製作的<b>材料</b>。同時還會獲得<b>分解經驗值</b>，提升<b>分解等級</b>。</p>
+    <ul class="steps">
+      <li>在背包中開啟<b>分解視窗</b>。</li>
+      <li>把要分解的裝備<b>加入分解清單</b>(直接拖曳或按「自動加入」)，再按<b>分解</b>按鈕。</li>
+      <li>依裝備的<b>品階·需求等級·強化數值</b>獲得對應材料。</li>
+    </ul>
+    <div class="callout warn"><b>⚠️ 不會被分解的</b> — <b>裝備中的裝備</b>、<b>鎖定(🔒)的裝備</b>、<b>上限石</b>會被排除在分解對象之外。</div>
+  </div>
+
+  <!-- 분해 필터 -->
+  <div class="card" id="filter">
+    <h2>🛡️ 分解篩選 — 「勾選 = 排除(保護)」</h2>
+    <p>按下分解視窗的<b>「自動加入」</b>按鈕後，背包中符合條件的裝備會自動加入分解清單。<b>篩選就是用來決定此時要加入什麼(=要分解什麼)。</b></p>
+    <table class="gtable">
+      <tr><th>篩選</th><th>勾選後</th></tr>
+      <tr><td><span class="star y">★</span> 排除黃星</td><td>將性能 <b>90~99%</b> 的裝備從自動清單中<b>排除(保護)</b></td></tr>
+      <tr><td><span class="star g">★</span> 排除綠星</td><td>將性能 <b>100%</b> 的裝備<b>排除(保護)</b></td></tr>
+      <tr><td>僅較弱裝備</td><td>只加入<b>比目前裝備性能更低的裝備</b>(升級·同級會排除)</td></tr>
+      <tr><td>品階 / 等級</td><td>只加入指定<b>品階·等級範圍</b>的裝備</td></tr>
+    </table>
+    <div class="callout tip"><b>💡 想保護好裝備</b> → 請<b>勾選排除黃星·綠星</b>。勾得越多就越會從自動清單中排除，<b>越安全</b>。(星星基準為攻擊力/防禦力性能 — 黃 90~99%、綠 100%)</div>
+    <div class="callout warn"><b>⚠️ 注意</b> — 篩選只套用於<b>「自動加入」與「自動分解」</b>。即使是有星星的裝備，<b>只要自己拖進分解清單就會被分解。</b></div>
+  </div>
+
+  <!-- 분해 레벨 -->
+  <div class="card" id="level">
+    <h2>📈 分解等級 & 經驗值</h2>
+    <p>每次分解都會獲得<b>分解經驗值</b>，累積後提升<b>分解等級</b>。(最高 <b>300 級</b>)</p>
+    <p>經驗值依<b>裝備品階越高給得越多</b>。</p>
+    <table class="gtable">
+      <tr><th>分解的裝備品階</th><th>普通</th><th>稀有</th><th>史詩</th><th>罕見</th><th>傳說</th></tr>
+      <tr><td>每件裝備經驗值</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr>
+    </table>
+    <div class="callout tip"><b>💡</b> 等級越高，升下一級所需的經驗值也越多。平常持續分解零碎裝備，等級就會自然累積。</div>
+  </div>
+
+  <!-- 재료 2배 보너스 -->
+  <div class="card" id="bonus">
+    <h2>✨ 材料雙倍獎勵</h2>
+    <p>分解等級提升後，分解時會有<b>材料雙倍獲得的機率</b>。<b>分解等級每 1 級 +0.1%</b>。</p>
+    <table class="gtable">
+      <tr><th>分解等級</th><th>雙倍機率</th></tr>
+      <tr><td>1</td><td>0%</td></tr>
+      <tr><td>11</td><td>1.0%</td></tr>
+      <tr><td>101</td><td>10.0%</td></tr>
+      <tr><td>201</td><td>20.0%</td></tr>
+      <tr><td><b>300 (最高)</b></td><td><b style="color:var(--green)">29.9%</b></td></tr>
+    </table>
+    <div class="callout tip"><b>💡</b> 觸發獎勵時，該次分解產出的<b>材料會整批變兩倍</b>。分解越多等級越高，獎勵機率也跟著變大，持續分解較划算。</div>
+  </div>
+
+  <!-- 자동분해 버튼 -->
+  <div class="card" id="auto">
+    <h2>🤖 自動分解按鈕 (畫面下方)</h2>
+    <p>開啟畫面<b>下方的自動分解按鈕</b>後，<b>符合篩選條件的裝備會自動被分解</b>。(好裝備請務必用上方篩選保護好！)</p>
+    <div class="callout warn"><b>⚠️ 剛登入時按鈕可能無效。</b> 登入遊戲後<b>把背包(分解視窗)開一次再關起來</b>，自動分解按鈕就會啟用。(因為分解功能首次開啟時才會準備完成。)</div>
+
+    <div class="btnrow">
+      <a class="btn ghost" href="index.html">← 返回指南選單</a>
+    </div>
+  </div>
+
+  <footer>© 2026 楓之幻想 · 裝備分解<br><span class="ai-credit">🤖 本網站由 <b>Claude AI</b> 協助製作</span></footer>
+</div>
+
+</body>
+</html>
