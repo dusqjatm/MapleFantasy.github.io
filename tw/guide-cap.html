@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>楓之幻想 - 上限系統</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <span class="logo">🍁 楓之幻想</span>
+  <a href="index.html">首頁</a>
+  <a href="../guide-cap.html" class="lang">🇰🇷 한국어</a>
+</nav>
+
+<div class="wrap">
+  <div class="hero">
+    <h1>🧱 上限系統</h1>
+    <p>提升了卻沒效果？先突破天花板(上限)吧</p>
+  </div>
+
+  <!-- 목차 -->
+  <div class="toc">
+    <b>快速跳轉</b>
+    <a href="#what">什麼是上限？</a>
+    <a href="#table">有上限的屬性</a>
+    <a href="#stone">上限石</a>
+    <a href="#capstat">上限提升能力值</a>
+    <a href="#tips">提升策略</a>
+  </div>
+
+  <div class="callout"><b>📋 有些能力值無論怎麼提升，超過一定數值就不會套用。</b> 那個界限稱為<b>上限</b>。不懂上限就會「裝備都湊齊了為什麼還是不強？」，請務必讀完本文。</div>
+
+  <!-- 상한이란 -->
+  <div class="card" id="what">
+    <h2>🔍 什麼是上限？</h2>
+    <p>部分能力值設定了<b>可套用的最大值(上限)</b>。超過上限的數值會<b>直接被捨棄。</b></p>
+    <div class="callout warn"><b>⚠️ 範例 — 爆擊率</b><br>
+      爆擊率上限是 <b>70%</b>，但用裝備將爆擊率湊到 <b>90%</b> 的話 →
+      實際上<b>只套用 70%</b>，剩下的 <b>20% 沒有效果。</b></div>
+    <p>也就是說，<b>被上限卡住的屬性再提升也是浪費</b>。想在那之上看到效果，就必須<b>提升上限本身</b>。</p>
+    <div class="callout tip"><b>💡</b> 把上限想成「只到這個數值有效」的<b>天花板</b>。要提高天花板，堆在上面的數值才終於有意義。</div>
+  </div>
+
+  <!-- 상한 걸린 스탯 -->
+  <div class="card" id="table">
+    <h2>📊 有上限的屬性</h2>
+    <p>主要能力值的<b>基本上限</b>(起始值)與<b>絕對上限</b>(再怎麼提升也無法超過的界限)。</p>
+    <table class="gtable">
+      <tr><th>能力值</th><th>基本上限</th><th>絕對上限</th></tr>
+      <tr><td>傷害</td><td>200%</td><td>400%</td></tr>
+      <tr><td>Boss 傷害</td><td>200%</td><td>350%</td></tr>
+      <tr><td>一般傷害</td><td>200%</td><td>350%</td></tr>
+      <tr><td><b>最終傷害</b></td><td><b>150%</b></td><td><b>200%</b></td></tr>
+      <tr><td>爆擊率</td><td>70%</td><td>100%</td></tr>
+      <tr><td>爆擊傷害</td><td>250%</td><td>400%</td></tr>
+      <tr><td>無視防禦</td><td>50%</td><td>90%</td></tr>
+      <tr><td>傷害減免</td><td>30%</td><td>70%</td></tr>
+      <tr><td>冷卻時間減少</td><td>30%</td><td>50%</td></tr>
+      <tr><td>異常狀態抵抗</td><td>50%</td><td>90%</td></tr>
+      <tr><td>增益持續時間</td><td>150%</td><td>200%</td></tr>
+      <tr><td>攻擊速度</td><td>8</td><td>8 (固定)</td></tr>
+    </table>
+    <div class="callout warn"><b>⚠️ 「最終傷害」上限最為嚴苛。</b> 基本 150% / 最大 200% 界限很低，若想衝最終傷害請務必顧好上限。</div>
+    <p class="muted">※ 移動速度 · 跳躍力只有基本上限，經驗值沒有上限。攻擊速度固定在 8(無法再提升)。</p>
+  </div>
+
+  <!-- 상한석 -->
+  <div class="card" id="stone">
+    <h2>💎 上限石 — 提升上限的核心裝備</h2>
+    <div class="callout warn"><b>⚠️ 上限石是 130 級以上的終局內容。</b> 上限本身從一開始就會套用，但用上限石提升上限是高等級階段的事，低等級時不用在意。</div>
+    <p>提升上限最基本的方法就是裝備<b>上限石</b>。</p>
+    <ul class="steps">
+      <li>上限石裝備在<b>專用欄位 1 格</b>。(一次只能 1 個)</li>
+      <li>上限石附有<b>隨機選項</b>，<b>該選項數值會提升對應的上限。</b></li>
+      <li>例：上限石有 <code>傷害 +8</code> 選項 → <b>傷害上限 +8</b>。</li>
+    </ul>
+
+    <h3>上限石品階</h3>
+    <table class="gtable">
+      <tr><th>品階</th><th>選項數量</th><th>選項數值</th></tr>
+      <tr><td>普通</td><td>1 行</td><td>基本</td></tr>
+      <tr><td>稀有</td><td>2 行</td><td>基本</td></tr>
+      <tr><td>史詩</td><td>3 行</td><td>基本</td></tr>
+      <tr><td>罕見</td><td>4 行</td><td>基本</td></tr>
+      <tr><td><b style="color:#8cdf6f">傳說</b></td><td>4 行</td><td><b>×1.4 (最大值提升)</b></td></tr>
+    </table>
+    <div class="callout tip"><b>💡</b> 品階越高<b>選項行數越多(最多 4 行)</b>，傳說連選項數值幅度都放大為 <b>1.4 倍</b>。一顆好的上限石能一次突破多個上限。</div>
+  </div>
+
+  <!-- 상한 증가 능력치 -->
+  <div class="card" id="capstat">
+    <h2>🔼 上限提升能力值</h2>
+    <p>除了上限石之外，還有<b>直接提升上限本身的能力值</b>。一般能力值是把數值<b>加上去</b>，但「上限提升」能力值是<b>直接提高天花板(上限)。</b></p>
+    <table class="gtable">
+      <tr><th>一般能力值</th><td><code>傷害 +10%</code> → 傷害增加 10% <span class="muted">(但只套用到上限為止)</span></td></tr>
+      <tr><th>上限提升能力值</th><td><code>傷害上限 +20%</code> → 傷害<b>上限提升 20%</b> <span class="muted">(能多堆那麼多)</span></td></tr>
+    </table>
+    <p><b>上限提升能力值並非所有屬性都有。</b> 只提升<b>傷害 · 爆擊傷害 · 一般怪物傷害 · Boss 傷害</b>等<b>部分攻擊屬性的上限</b>，主要從<b>圖鑑</b>取得。</p>
+    <div class="callout warn"><b>⚠️ 別搞混了！</b> <b>「傷害 +20%」</b>(能力值本身)與<b>「傷害<u>上限</u> +20%」</b>(提高天花板)是<b>完全不同的選項</b>。若被上限卡住，前者是浪費，需要的是後者。</div>
+    <div class="callout tip"><b>💡</b> 上限石與上限提升能力值<b>一起</b>顧好，就能把被卡住的屬性天花板拉到<b>絕對上限</b>。</div>
+  </div>
+
+  <!-- 전략 -->
+  <div class="card" id="tips">
+    <h2>🎯 提升上限的策略</h2>
+    <p>提升上限的方法有兩種。</p>
+    <table class="gtable">
+      <tr><th>① 上限石</th><td>裝備在專用欄位 (主要手段)</td></tr>
+      <tr><th>② 上限提升選項</th><td>部分裝備 · 技能附加的<b>「○○ 上限 +N」</b>選項 (不如上限石常見)</td></tr>
+    </table>
+    <p>將這兩者結合，把屬性拉到<b>絕對上限</b>就是最終目標。</p>
+
+    <div class="callout warn"><b>⚠️ 在盲目提升屬性前請先確認上限。</b> 已經達到上限的屬性再提升<b>全是浪費</b>。那種情況下，與其堆能力值，不如用<b>上限石 · 上限選項</b>先提高天花板更划算。</div>
+    <div class="callout tip"><b>💡 優先順序</b> — 像上限低很快就卡住的<b>最終傷害(150) · 爆擊率(70)</b>這類屬性先突破上限效率更好。</div>
+
+    <div class="btnrow">
+      <a class="btn ghost" href="index.html">← 返回指南選單</a>
+    </div>
+  </div>
+
+  <footer>© 2026 楓之幻想 · 上限系統<br><span class="ai-credit">🤖 本網站由 <b>Claude AI</b> 協助製作</span></footer>
+</div>
+
+</body>
+</html>

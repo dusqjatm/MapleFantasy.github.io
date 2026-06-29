@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>楓之幻想 - 狩獵場房間說明</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <span class="logo">🍁 楓之幻想</span>
+  <a href="index.html">首頁</a>
+  <a href="../guide-room.html" class="lang">🇰🇷 한국어</a>
+</nav>
+
+<div class="wrap">
+  <div class="hero">
+    <h1>🏕️ 狩獵場房間說明</h1>
+    <p>單獨也好、一起也好 — 房間是怎麼運作的</p>
+  </div>
+
+  <!-- 목차 -->
+  <div class="toc">
+    <b>快速跳轉</b>
+    <a href="#count">怪物數量</a>
+    <a href="#party">隊伍經驗值</a>
+    <a href="#level">等級限制</a>
+    <a href="#room">房間等級</a>
+    <a href="#elite">菁英頻道</a>
+  </div>
+
+  <div class="callout"><b>📋 進入狩獵場後會與同房間的人自動組隊。</b> 依人數不同，怪物數量與經驗值會改變，了解房間如何運作能讓狩獵快得多。</div>
+
+  <!-- 몬스터 수 -->
+  <div class="card" id="count">
+    <h2>🐗 怪物會依人數增加</h2>
+    <p>狩獵場的怪物數量<b>與房間內人數成正比</b>。每當有人進來，就會依該狩獵場設定的數量追加怪物。</p>
+    <table class="gtable">
+      <tr><th>房間人數</th><th>怪物數量 (範例)</th></tr>
+      <tr><td>1 人 (單獨)</td><td>30 隻</td></tr>
+      <tr><td>2 人</td><td>50 隻 (+20)</td></tr>
+      <tr><td>3 人</td><td>70 隻 (+20)</td></tr>
+    </table>
+    <p class="muted">※ 確切的隻數<b>每個狩獵場都不同。</b> 上方 30·+20 是為了方便理解的範例，重點是<b>「人變多怪物也變多」</b>。</p>
+
+    <div class="callout tip"><b>💡 公開房最多 3 人</b>可進入，會與同房間的人自動組隊。想單獨進行請選擇<b>單人進入</b>。人越多怪物也越多，大家一起能更快狩獵。</div>
+  </div>
+
+  <!-- 파티 경험치 -->
+  <div class="card" id="party">
+    <h2>✨ 隊伍經驗值</h2>
+    <p>房間內<b>2 人以上</b>時會套用隊伍經驗值規則。</p>
+    <ul class="steps">
+      <li><b>不用搶最後一擊也能獲得</b> — 隊員打倒的怪物經驗值也會一起獲得。</li>
+      <li><b>依等級比例分配</b> — 打出最後一擊的人獲得稍多，其餘依等級比例分配。</li>
+      <li><b>依人數附加隊伍加成</b>，整體經驗值總量會增加。</li>
+    </ul>
+
+    <h3>隊伍加成</h3>
+    <table class="gtable">
+      <tr><th>人數</th><th>經驗值加成</th></tr>
+      <tr><td>1 人 (單獨)</td><td>100%</td></tr>
+      <tr><td>2 人</td><td>+15%</td></tr>
+      <tr><td>3 人以上</td><td>+30%</td></tr>
+    </table>
+
+    <div class="callout tip"><b>💡</b> 雖然每隻的經驗值會分配，但因為<b>怪物會依人數增加、又有加成</b>，整體而言<b>一起狩獵更快。</b></div>
+    <div class="callout tip"><b>💎 稀有怪物</b>的掉落由有資格的隊員<b>各自分別</b>撿取。不會被搶最後一擊的人獨佔，請放心。</div>
+  </div>
+
+  <!-- 레벨 제한 -->
+  <div class="card" id="level">
+    <h2>📏 等級限制 — 差距太大就無效</h2>
+    <p>想獲得經驗值與獎勵，必須滿足<b>資格條件</b>。</p>
+    <table class="gtable">
+      <tr><th>條件</th><th>內容</th></tr>
+      <tr><td>等級差</td><td>與怪物<b>相差 10 級以內</b></td></tr>
+      <tr><td>狩獵活動</td><td>最近<b>30 秒內</b>有攻擊紀錄</td></tr>
+    </table>
+    <div class="callout warn"><b>⚠️ 與怪物等級差超過 10 時</b>，即使在同一房間也會<b>被排除在經驗值 · 掉落分配之外</b>。(進入本身沒問題，但不會獲得獎勵。) 另外<b>超過 30 秒一直不動</b>也會因防止搭便車被排除。</div>
+
+    <h3>依等級差的經驗值倍率</h3>
+    <table class="gtable">
+      <tr><th>等級差</th><th>經驗值</th></tr>
+      <tr><td>3 以下</td><td><b style="color:var(--green)">100%</b></td></tr>
+      <tr><td>4 ~ 10</td><td>90% → 30% <span class="muted">(每差 1 級 −10%)</span></td></tr>
+      <tr><td>11 ~ 39</td><td>逐漸減少</td></tr>
+      <tr><td>40 以上</td><td><b style="color:var(--red)">0%</b></td></tr>
+    </table>
+    <div class="callout tip"><b>💡</b> 想獲得最多經驗值，請在<b>與自己等級相近的狩獵場</b>(等級差 3 以內)狩獵。</div>
+  </div>
+
+  <!-- 룸 레벨 -->
+  <div class="card" id="room">
+    <h2>📈 房間等級</h2>
+    <p>在同一狩獵場打越多怪，該<b>房間的等級</b>就越高 (最高 20 級)。房間等級提升後，下列加成會依序開啟並逐漸變大。</p>
+    <table class="gtable">
+      <tr><th>加成</th><th>開啟時機</th><th>最大</th></tr>
+      <tr><td>經驗值</td><td>房間等級 1 起</td><td>+10%</td></tr>
+      <tr><td>楓幣</td><td>房間等級 6 起</td><td>+10%</td></tr>
+      <tr><td>掉落率</td><td>房間等級 11 起</td><td>+10%</td></tr>
+    </table>
+    <div class="callout tip"><b>💡</b> 在同一狩獵場定點持續狩獵，房間等級會累積，依<b>經驗值 → 楓幣 → 掉落</b>順序附加加成。</div>
+  </div>
+
+  <!-- 엘리트 채널 -->
+  <div class="card" id="elite">
+    <h2>🔥 菁英頻道</h2>
+    <p>狩獵場有多個<b>頻道</b>。頻道 1~3 是一般，<b>頻道 4·5 是菁英</b>頻道。</p>
+    <table class="gtable">
+      <tr><th>菁英頻道進入條件</th><td>狩獵場等級 <b>100 以上</b>才能進入</td></tr>
+      <tr><th>菁英怪物</th><td>HP <b>4 倍</b> · 經驗值 · 楓幣 · 掉落 <b>各 3 倍</b></td></tr>
+    </table>
+    <div class="callout warn"><b>⚠️ 菁英是高風險高效率</b>。怪物堅硬得多，但獎勵 3 倍，請在充分變強的高等級再挑戰。</div>
+
+    <div class="btnrow">
+      <a class="btn ghost" href="index.html">← 返回指南選單</a>
+    </div>
+  </div>
+
+  <footer>© 2026 楓之幻想 · 狩獵場房間說明<br><span class="ai-credit">🤖 本網站由 <b>Claude AI</b> 協助製作</span></footer>
+</div>
+
+</body>
+</html>

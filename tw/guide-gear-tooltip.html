@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>楓之幻想 - 裝備資訊解讀</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <span class="logo">🍁 楓之幻想</span>
+  <a href="index.html">首頁</a>
+  <a href="../guide-gear-tooltip.html" class="lang">🇰🇷 한국어</a>
+</nav>
+
+<div class="wrap">
+  <div class="hero">
+    <h1>🛡️ 裝備資訊解讀</h1>
+    <p>看似複雜的裝備資訊，只要懂 4 個區塊就夠了</p>
+  </div>
+
+  <!-- 목차 -->
+  <div class="toc">
+    <b>快速跳轉</b>
+    <a href="#grade">品階色彩</a>
+    <a href="#base">① 基本選項</a>
+    <a href="#random">② 隨機選項</a>
+    <a href="#enhance">③ 強化選項</a>
+    <a href="#socket">④ 插槽</a>
+  </div>
+
+  <div class="callout"><b>📋 裝備提示框由上而下分成 4 個區塊</b> —
+    <b>① 基本選項</b> · <b>② 隨機選項</b> · <b>③ 強化選項</b> · <b>④ 插槽</b>。一個一個來看。</div>
+
+  <!-- 등급 색상 -->
+  <div class="card" id="grade">
+    <h2>🎨 品階色彩</h2>
+    <p>裝備與選項的品階以<b>顏色</b>區分。越高越好。</p>
+    <p>
+      <span class="gchip" style="color:#c2cad1;border-color:#c2cad1;background:rgba(194,202,209,.08)">普通</span>
+      <span class="gchip" style="color:#6fa7df;border-color:#6fa7df;background:rgba(111,167,223,.10)">稀有</span>
+      <span class="gchip" style="color:#ba6fdf;border-color:#ba6fdf;background:rgba(186,111,223,.10)">史詩</span>
+      <span class="gchip" style="color:#f7dd72;border-color:#f7dd72;background:rgba(247,221,114,.10)">罕見</span>
+      <span class="gchip" style="color:#8cdf6f;border-color:#8cdf6f;background:rgba(140,223,111,.10)">傳說</span>
+    </p>
+    <div class="callout tip"><b>💡 潛能(隨機選項)品階出現的機率</b> — 約 普通 70% · 稀有 20% · 史詩 7% · 罕見 3% · <b>傳說 0.1%</b>。品階越高越稀有。</div>
+  </div>
+
+  <!-- ① 기본옵션 -->
+  <div class="card" id="base">
+    <h2>① 基本選項</h2>
+    <p>裝備<b>一開始就擁有的固定屬性</b>(STR、攻擊力等)。即使是相同裝備，每次取得時數值也會稍有不同。</p>
+
+    <h3>性能百分比(%)</h3>
+    <p>基本選項旁<b>灰色括號的 %</b>，表示該數值<b>位於可能出現的最低~最高之間的哪個位置</b>。越接近 100% 就是越好的裝備。</p>
+    <p class="muted">例：<code>STR +45 <span style="color:#888">(92%)</span></code> → 此部位可擁有的 STR 中屬於前 92% 性能</p>
+
+    <div class="callout tip"><b>⭐ 圖示上的星星</b> —
+      <span class="star y">★</span> <b>黃星</b> = 基本選項性能 <b>90~99%</b> &nbsp;/&nbsp;
+      <span class="star g">★</span> <b>綠星</b> = <b>100%</b> (最高性能)。有星星的裝備就是基礎優秀的裝備。</div>
+
+    <div class="callout warn"><b>⚠️ 基本選項的 % 無法更改。</b> 重生火焰或強化都無法改變，請挑選有好星星的裝備來使用。(但強化階段提升後，主屬性會追加<b>額外加成</b>)</div>
+
+    <h3>各品階數值倍率</h3>
+    <table class="gtable">
+      <tr><th>品階</th><th>普通</th><th>稀有</th><th>史詩</th><th>罕見</th><th>傳說</th></tr>
+      <tr><td>倍率</td><td>×0.8</td><td>×1.0</td><td>×1.1</td><td>×1.2</td><td>×1.3</td></tr>
+    </table>
+    <p class="muted">品階越高，基本選項的數值本身起點就越高。</p>
+  </div>
+
+  <!-- ② 랜덤옵션 -->
+  <div class="card" id="random">
+    <h2>② 隨機選項 <span class="badge">潛能</span></h2>
+    <p>除了基本選項之外<b>額外附加的選項</b>，最多顯示<b>4 行</b>。每一行都有品階(顏色)，可一眼看出品質。</p>
+
+    <h3>會出現什麼選項？</h3>
+    <table class="gtable">
+      <tr><th>武器</th><td>攻擊力 · 爆擊率/傷害 · Boss 傷害 · 一般怪傷害</td></tr>
+      <tr><th>防具</th><td>STR/DEX 等屬性 · 防禦力 · 最大 HP% 等</td></tr>
+    </table>
+
+    <h3>🔥 用重生火焰賦予/變更</h3>
+    <p>隨機選項用<b>重生的火焰</b>重新洗。依火焰種類不同，<b>可出現的最高選項品階</b>與<b>品質保證</b>也不同。</p>
+    <table class="gtable">
+      <tr><th>重生火焰</th><th>最高品階</th><th>特色</th></tr>
+      <tr><td>一般重生火焰</td><td><b>A</b></td><td>使用 1 / 50 / 80 個 — 用越多保證品質下限越高 (50 個 = 50%↑，80 個 = 80%↑)</td></tr>
+      <tr><td>強烈的重生火焰 <span class="muted">(強重火)</span></td><td><b>S</b></td><td>自動保證品質最低 50%</td></tr>
+      <tr><td>永恆的重生火焰 <span class="muted">(永重火)</span></td><td><b>SS</b></td><td>保證品質最低 50% · <b style="color:var(--orange)">目前尚無取得管道</b></td></tr>
+      <tr><td>漆黑的重生火焰</td><td>—</td><td>預先查看新選項(比較前/後)再選擇是否套用</td></tr>
+    </table>
+    <div class="callout warn"><b>⚠️ 永恆的重生火焰</b>目前<b>沒有掉落 · 取得管道。</b> (日後預計新增)</div>
+    <div class="callout warn"><b>⚠️ 火焰等級限制</b> — 每種火焰都有可使用的<b>裝備最高等級</b>。(各火焰品階：50 / 100 / 150 / 200 / 300 等級) 若裝備需求等級更高就無法使用。</div>
+  </div>
+
+  <!-- ③ 강화옵션 -->
+  <div class="card" id="enhance">
+    <h2>③ 強化選項</h2>
+    <p><b>強化</b>裝備後階段(+數字)會提升，主屬性增加，並在特定階段開啟<b>附加選項</b>。強化數值會像 <code>(+12)</code> 一樣顯示在名稱後方。</p>
+
+    <h3>主屬性加成</h3>
+    <ul>
+      <li><b>1~15 強</b> — 每階段 <b>+5%</b></li>
+      <li><b>16~20 強</b> — 每階段 <b>+25%</b></li>
+    </ul>
+
+    <h3>附加選項解鎖階段</h3>
+    <table class="gtable">
+      <tr><th>強化階段</th><th>解鎖</th></tr>
+      <tr><td>3 強</td><td>附加選項第 1 行</td></tr>
+      <tr><td>6 強</td><td>附加選項第 2 行</td></tr>
+      <tr><td>9 強</td><td>附加選項第 3 行</td></tr>
+      <tr><td>12 強</td><td>附加選項第 4 行 (完全隨機 ???)</td></tr>
+    </table>
+    <p class="muted">從 15 強開始選項本身也會被強化 (×1.5，20 強為 ×2)。</p>
+
+    <h3>強化成功率</h3>
+    <table class="gtable">
+      <tr><th>階段</th><th>0~14 強</th><th>15 強</th><th>16 強</th><th>17 強</th><th>18 強</th><th>19 強</th><th>20 強</th></tr>
+      <tr><td>成功率</td><td>100%</td><td>50%</td><td>30%</td><td>15%</td><td>5%</td><td>1%</td><td>1%</td></tr>
+    </table>
+    <p class="muted">※ 高強化(15 強以上)成功率可能依平衡調整而改變，請以遊戲內顯示為準。</p>
+    <div class="callout tip"><b>💡</b> 3·6·9 強這類解鎖區間幾乎必定成功，若想要附加選項，可放心強化到這些區間。</div>
+  </div>
+
+  <!-- ④ 소켓 -->
+  <div class="card" id="socket">
+    <h2>④ 插槽</h2>
+    <p><b>鑲嵌寶石</b>來獲得額外效果的欄位。依裝備種類效果不同。</p>
+    <table class="gtable">
+      <tr><th>武器</th><td><b>傷害 +%</b></td></tr>
+      <tr><th>防具</th><td><b>全屬性 +%</b></td></tr>
+    </table>
+    <ul class="steps">
+      <li>依插槽<b>品階(普通~傳說)</b>決定<b>槽位數量</b>。</li>
+      <li>用<b>寶石粉末</b>在空槽鑲嵌寶石。(寶石數值為隨機)</li>
+      <li>不滿意的話可以<b>用楓幣重置</b>。(費用：裝備等級 × 100,000 楓幣)</li>
+    </ul>
+    <div class="callout warn"><b>⚠️</b> 飾品 · 卡片類裝備沒有插槽。(以武器 · 防具為主)</div>
+
+    <div class="btnrow">
+      <a class="btn ghost" href="index.html">← 返回指南選單</a>
+    </div>
+  </div>
+
+  <footer>© 2026 楓之幻想 · 裝備資訊解讀<br><span class="ai-credit">🤖 本網站由 <b>Claude AI</b> 協助製作</span></footer>
+</div>
+
+</body>
+</html>

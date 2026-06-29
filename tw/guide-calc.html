@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>楓之幻想 - 傷害計算公式</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <span class="logo">🍁 楓之幻想</span>
+  <a href="index.html">首頁</a>
+  <a href="../guide-calc.html" class="lang">🇰🇷 한국어</a>
+</nav>
+
+<div class="wrap">
+  <div class="hero">
+    <h1>🧮 傷害計算公式</h1>
+    <p>您的傷害是怎麼算出來的，照順序拆解給您看</p>
+  </div>
+
+  <!-- 목차 -->
+  <div class="toc">
+    <b>快速跳轉</b>
+    <a href="#flow">計算順序</a>
+    <a href="#dmg">傷害% 加算</a>
+    <a href="#crit">爆擊</a>
+    <a href="#level">等級差</a>
+  </div>
+
+  <div class="callout"><b>📋 傷害不是一次就決定的。</b> 從攻擊力出發，經過好幾個階段才算出最終數字。只要懂順序，就能看出自己的選項在哪裡發揮作用。</div>
+
+  <!-- 계산 순서 -->
+  <div class="card" id="flow">
+    <h2>🔢 傷害計算順序</h2>
+    <p>攻擊一次時，傷害會依下列順序計算。</p>
+    <ol class="steps">
+      <li><b>基本傷害</b> — 在我的<b>攻擊力(ATK)</b>的最小~最大之間隨機決定。</li>
+      <li><b>技能傷害%</b> — 乘上所用技能的係數。(例：250% 技能就是 ×2.5)</li>
+      <li><b>扣除防禦力</b> — 依怪物防禦力扣減，並以<b>無視防禦(防無)</b>穿透一部分。</li>
+      <li><b>套用傷害%</b> — 將<b>總傷害 + Boss/一般傷害</b>相加後相乘。 <span class="muted">(參考下方 ②)</span></li>
+      <li><b>最終傷害%</b> — 最終傷害加成在最後相乘。</li>
+      <li><b>等級差修正</b> — 以我與怪物的等級差做最後修正。 <span class="muted">(參考下方 ④)</span></li>
+    </ol>
+    <div class="callout tip"><b>💡 一句話總結</b> — <code>攻擊力 × 技能% − 防禦 × (傷害% 合計) × 最終傷害% × 等級修正</code>。本文會詳細介紹容易混淆的 <b>傷害% 加算</b>·<b>爆擊</b>·<b>等級差</b> 這 3 點。</div>
+  </div>
+
+  <!-- 데미지% 합연산 -->
+  <div class="card" id="dmg">
+    <h2>① 傷害% 加算 <span class="badge">最重要</span></h2>
+    <p>裝備 · 屬性上附加的傷害選項大致分兩種。</p>
+    <table class="gtable">
+      <tr><th>總傷害 (Dmg)</th><td>對所有敵人套用的傷害增加</td></tr>
+      <tr><th>Boss 傷害 / 一般傷害</th><td>對象是<b>Boss 只套用 Boss 傷害</b>，<b>一般怪只套用一般傷害</b> (不會同時生效)</td></tr>
+    </table>
+
+    <h3>公式</h3>
+    <p><code>傷害倍率 = 1 + (總傷% − 100)/100 + (對象傷% − 100)/100</code></p>
+    <p class="muted">基準是 <b>100% = ×1</b>。各選項減去 100 相加後再加 1。</p>
+
+    <div class="callout warn"><b>⚠️ 不是乘算而是加算。</b> 兩個選項不相乘而是<b>相加。</b><br>
+      例) 以 總傷 150%、Boss 傷 180% 攻擊<b>Boss</b>時 →
+      <br><code>1 + (150−100)/100 + (180−100)/100 = 1 + 0.5 + 0.8 = ×2.3</code>
+      <br><span class="muted">(若是乘算則為 1.5 × 1.8 = ×2.7，但本遊戲是 ×2.3。)</span></div>
+
+    <div class="callout tip"><b>💡</b> 因此與其集中堆一個選項，<b>總傷與 Boss 傷均衡</b>提升效率更好。(若主要打 Boss，請提高 Boss 傷比重。)</div>
+  </div>
+
+  <!-- 크리티컬 -->
+  <div class="card" id="crit">
+    <h2>② 爆擊</h2>
+    <p>每次攻擊都有一定機率觸發<b>爆擊(致命一擊)</b>，觸發時傷害大幅增加。</p>
+    <table class="gtable">
+      <tr><th>爆擊率</th><td>每次攻擊以此機率觸發爆擊。(例：30%)</td></tr>
+      <tr><th>爆擊傷害</th><td>觸發爆擊的攻擊傷害 <b>×(爆擊傷害/100)</b>。(例：150% → 1.5 倍)</td></tr>
+    </table>
+
+    <div class="callout warn"><b>⚠️ 怪物的抵抗(ResistAll)</b>會降低我的爆擊率。 <b>包含 Boss 在內的所有怪物</b>都會套用，因此抵抗越高的敵人爆擊越不易觸發。所以若以爆擊為主培養，<b>充分確保爆擊率</b>會比較好。</div>
+
+    <div class="callout tip"><b>💡 多段攻擊技能</b>每一段都會分別判定爆擊 — 一次可能只有部分爆擊。將爆擊率提升到 <b>100%</b> 則所有攻擊必定爆擊。<b>爆擊率與爆擊傷害兩者都要提升</b>才有意義。</div>
+  </div>
+
+  <!-- 레벨 차이 -->
+  <div class="card" id="level">
+    <h2>③ 等級差修正</h2>
+    <p>依我的等級與怪物等級的差(<code>我的等級 − 怪物等級</code>)，傷害會在最後做修正。</p>
+    <table class="gtable">
+      <tr><th>等級差</th><th>傷害修正</th></tr>
+      <tr><td>+5 以上 (我高 5 級以上)</td><td><b style="color:var(--green)">120%</b> (加成)</td></tr>
+      <tr><td>0 ~ +4 (相同或略高)</td><td>100% + 等級差 × 4% <span class="muted">(+4 時為 116%)</span></td></tr>
+      <tr><td>−1 ~ −39 (怪物較高)</td><td>逐漸減少 <span class="muted">(−10 → 75%，−20 → 50%，−39 → 2%)</span></td></tr>
+      <tr><td>−40 以下 (怪物高 40 級以上)</td><td><b style="color:var(--red)">0% (傷害無效)</b></td></tr>
+    </table>
+
+    <div class="callout warn"><b>⚠️ 怪物比我高 40 級以上時傷害為 0。</b> 太高的狩獵場就算進去也完全打不動，請選擇<b>符合自己等級的狩獵場</b>。</div>
+    <div class="callout tip"><b>💡</b> 反過來說，比怪物<b>高 5 級以上會獲得 +20% 傷害加成</b>。這就是低一階的狩獵場狩獵更快的原因。</div>
+
+    <div class="btnrow">
+      <a class="btn ghost" href="index.html">← 返回指南選單</a>
+    </div>
+  </div>
+
+  <footer>© 2026 楓之幻想 · 傷害計算公式<br><span class="ai-credit">🤖 本網站由 <b>Claude AI</b> 協助製作</span></footer>
+</div>
+
+</body>
+</html>
