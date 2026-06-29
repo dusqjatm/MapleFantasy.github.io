@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>메이플 판타지 - 사냥터 룸 설명</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <span class="logo">🍁 메이플 판타지</span>
+  <a href="index.html">홈</a>
+</nav>
+
+<div class="wrap">
+  <div class="hero">
+    <h1>🏕️ 사냥터 룸 설명</h1>
+    <p>혼자서도, 같이서도 — 룸이 어떻게 돌아가는지</p>
+  </div>
+
+  <!-- 목차 -->
+  <div class="toc">
+    <b>바로가기</b>
+    <a href="#count">몬스터 수</a>
+    <a href="#party">파티 경험치</a>
+    <a href="#level">레벨 제한</a>
+    <a href="#room">룸 레벨</a>
+    <a href="#elite">엘리트 채널</a>
+  </div>
+
+  <div class="callout"><b>📋 사냥터에 들어가면 같은 룸의 사람들과 자동으로 파티가 됩니다.</b> 인원에 따라 몬스터 수와 경험치가 달라지니, 룸이 어떻게 작동하는지 알아두면 사냥이 훨씬 빨라집니다.</div>
+
+  <!-- 몬스터 수 -->
+  <div class="card" id="count">
+    <h2>🐗 인원에 따라 몬스터가 늘어납니다</h2>
+    <p>사냥터의 몬스터 수는 <b>룸 안의 인원수에 비례</b>합니다. 사람이 들어올 때마다 그 사냥터에 정해진 만큼 몬스터가 추가됩니다.</p>
+    <table class="gtable">
+      <tr><th>룸 인원</th><th>몬스터 수 (예시)</th></tr>
+      <tr><td>1명 (혼자)</td><td>30마리</td></tr>
+      <tr><td>2명</td><td>50마리 (+20)</td></tr>
+      <tr><td>3명</td><td>70마리 (+20)</td></tr>
+    </table>
+    <p class="muted">※ 정확한 마리 수는 <b>사냥터마다 다릅니다.</b> 위 30·+20은 이해를 돕기 위한 예시이며, 핵심은 <b>"사람이 늘면 몬스터도 늘어난다"</b>입니다.</p>
+
+    <div class="callout tip"><b>💡 공개방은 최대 3명</b>까지 들어올 수 있고, 같은 룸 사람과 자동으로 파티가 됩니다. 혼자 하고 싶다면 <b>개인 입장</b>을 고르세요. 사람이 많을수록 몬스터도 많아져서, 다 같이 더 빠르게 사냥할 수 있습니다.</div>
+  </div>
+
+  <!-- 파티 경험치 -->
+  <div class="card" id="party">
+    <h2>✨ 파티 경험치</h2>
+    <p>룸에 <b>2명 이상</b>이면 파티 경험치 규칙이 적용됩니다.</p>
+    <ul class="steps">
+      <li><b>막타를 치지 않아도 받습니다</b> — 파티원이 잡은 몬스터의 경험치도 함께 받습니다.</li>
+      <li><b>레벨 비율로 분배</b>됩니다 — 막타를 친 사람이 조금 더 받고, 나머지는 레벨 비율대로 나눠 받습니다.</li>
+      <li><b>인원수만큼 파티 보너스</b>가 붙어 전체 경험치 총량이 늘어납니다.</li>
+    </ul>
+
+    <h3>파티 보너스</h3>
+    <table class="gtable">
+      <tr><th>인원</th><th>경험치 보너스</th></tr>
+      <tr><td>1명 (혼자)</td><td>100%</td></tr>
+      <tr><td>2명</td><td>+15%</td></tr>
+      <tr><td>3명 이상</td><td>+30%</td></tr>
+    </table>
+
+    <div class="callout tip"><b>💡</b> 한 마리당 경험치는 나눠 갖지만, <b>인원수만큼 몬스터도 늘어나고 보너스도 붙기</b> 때문에 전체적으로는 <b>같이 사냥하는 게 더 빠릅니다.</b></div>
+    <div class="callout tip"><b>💎 레어 몬스터</b>의 드롭은 자격이 있는 파티원이 <b>각자 따로</b> 줍습니다. 막타 친 사람이 독식하지 않으니 안심하세요.</div>
+  </div>
+
+  <!-- 레벨 제한 -->
+  <div class="card" id="level">
+    <h2>📏 레벨 제한 — 너무 차이나면 무효</h2>
+    <p>경험치와 보상을 받으려면 <b>자격 조건</b>을 만족해야 합니다.</p>
+    <table class="gtable">
+      <tr><th>조건</th><th>내용</th></tr>
+      <tr><td>레벨 차이</td><td>몬스터와 <b>10레벨 이내</b></td></tr>
+      <tr><td>사냥 활동</td><td>최근 <b>30초 안에</b> 공격한 기록</td></tr>
+    </table>
+    <div class="callout warn"><b>⚠️ 몬스터와 레벨 차이가 10을 넘으면</b>, 같은 룸에 있어도 <b>경험치·드롭 분배에서 제외</b>됩니다. (입장 자체는 되지만 보상이 안 들어옵니다.) 또 <b>30초 넘게 가만히 있으면</b> 무임승차 방지로 제외됩니다.</div>
+
+    <h3>레벨 차이에 따른 경험치 배율</h3>
+    <table class="gtable">
+      <tr><th>레벨 차이</th><th>경험치</th></tr>
+      <tr><td>3 이하</td><td><b style="color:var(--green)">100%</b></td></tr>
+      <tr><td>4 ~ 10</td><td>90% → 30% <span class="muted">(1 차이당 −10%)</span></td></tr>
+      <tr><td>11 ~ 39</td><td>점점 감소</td></tr>
+      <tr><td>40 이상</td><td><b style="color:var(--red)">0%</b></td></tr>
+    </table>
+    <div class="callout tip"><b>💡</b> 경험치를 가장 많이 받으려면 <b>내 레벨과 비슷한 사냥터</b>(레벨 차이 3 이내)에서 사냥하세요.</div>
+  </div>
+
+  <!-- 룸 레벨 -->
+  <div class="card" id="room">
+    <h2>📈 룸 레벨</h2>
+    <p>한 사냥터에서 몬스터를 잡을수록 그 <b>룸의 레벨</b>이 올라갑니다 (최대 20레벨). 룸 레벨이 오르면 아래 보너스가 차례로 열리고 점점 커집니다.</p>
+    <table class="gtable">
+      <tr><th>보너스</th><th>열리는 시점</th><th>최대</th></tr>
+      <tr><td>경험치</td><td>룸 레벨 1부터</td><td>+10%</td></tr>
+      <tr><td>메소</td><td>룸 레벨 6부터</td><td>+10%</td></tr>
+      <tr><td>드롭률</td><td>룸 레벨 11부터</td><td>+10%</td></tr>
+    </table>
+    <div class="callout tip"><b>💡</b> 한 사냥터에 자리 잡고 꾸준히 사냥하면 룸 레벨이 쌓여 <b>경험치 → 메소 → 드롭</b> 순서로 보너스가 붙습니다.</div>
+  </div>
+
+  <!-- 엘리트 채널 -->
+  <div class="card" id="elite">
+    <h2>🔥 엘리트 채널</h2>
+    <p>사냥터에는 여러 <b>채널</b>이 있습니다. 채널 1~3은 일반, <b>채널 4·5는 엘리트</b> 채널입니다.</p>
+    <table class="gtable">
+      <tr><th>엘리트 채널 입장 조건</th><td>사냥터 레벨 <b>100 이상</b>에서만 입장 가능</td></tr>
+      <tr><th>엘리트 몬스터</th><td>HP <b>4배</b> · 경험치·메소·드롭 <b>각 3배</b></td></tr>
+    </table>
+    <div class="callout warn"><b>⚠️ 엘리트는 고위험 고효율</b>입니다. 몬스터가 훨씬 단단한 대신 보상이 3배라, 충분히 강해진 고레벨에서 도전하세요.</div>
+
+    <div class="btnrow">
+      <a class="btn ghost" href="index.html">← 가이드 메뉴로 돌아가기</a>
+    </div>
+  </div>
+
+  <footer>© 2026 메이플 판타지 · 사냥터 룸 설명<br><span class="ai-credit">🤖 이 사이트는 <b>Claude AI</b>의 도움으로 만들었습니다</span></footer>
+</div>
+
+</body>
+</html>
